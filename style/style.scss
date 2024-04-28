@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import "normalize.css";
+@import "vars";
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#layout {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.footer {
+}
+
+.container {
+  max-width: $phone;
+  min-width: $phone;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.poker {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1e1e;
+  padding: 10px;
+
+  & .top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    margin-bottom: 30px;
+
+    &__bg {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+
+      .bg-hex {
+        margin-top: -23%;
+        width: 130%;
+        object-position: center;
+      }
+
+      .bg-man {
+        position: absolute;
+        top: 0;
+        max-width: 380px;
+        object-fit: contain;
+        object-position: center;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .poker-cc {
+          margin-top: -6rem;
+          width: 80%;
+        }
+      }
+    }
+
+    &__col-left,
+    &__col-right {
+      width: 25%;
+      position: absolute;
+      z-index: 2;
+
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+      }
+    }
+
+    &__col-left {
+      left: 0;
+      top: 10px;
+      @media screen and (max-width: 470px) {
+      }
+
+      .list {
+        align-items: start;
+
+        &__item {
+          max-width: 55px;
+
+          &.chip-1 {
+            margin-left: 10%;
+          }
+
+          &.coin-1 {
+            width: 52%;
+            margin-top: -0.8em;
+            margin-left: 4.5em;
+            transform: rotate(90deg);
+          }
+
+          &.coin {
+            width: 38px;
+            margin-left: 2.5em;
+            transform: rotate(160deg);
+          }
+
+          &.chip-2 {
+            margin-top: 0.5em;
+            margin-left: 3em;
+          }
+
+          &.coin-2 {
+            margin-top: -1.6em;
+            margin-left: 1em;
+            width: 27px;
+          }
+
+          &.chip-3 {
+            margin-top: 1em;
+            margin-left: 1em;
+            transform: rotate(65deg);
+          }
+
+          &.coin-3 {
+            transform: rotate(160deg);
+            margin-top: 4.7em;
+            margin-left: 1em;
+          }
+        }
+      }
+    }
+
+    &__col-right {
+      top: 0;
+      right: 0;
+
+      @media screen and (max-width: 470px) {
+      }
+
+      .list {
+        align-items: end;
+
+        &__item {
+          max-width: 4rem;
+
+          &.chip-1 {
+            transform: rotate(70deg);
+            margin-right: 0.6em;
+          }
+
+          &.coin {
+            width: 38px;
+            margin-top: -2em;
+            margin-right: 3.6em;
+            transform: rotate(90deg);
+          }
+
+          &.coin-1 {
+            width: 50px;
+            margin-top: 1em;
+            margin-right: 2em;
+          }
+
+          &.chip-2 {
+            width: 42px;
+            margin-top: 1em;
+            margin-right: 0.3em;
+          }
+
+          &.chip-3 {
+            min-width: 60px !important;
+            margin-top: 0.8em;
+            margin-right: 0.6em;
+            transform: rotate(45deg);
+          }
+
+          &.coin-2 {
+            width: 38px;
+            margin-top: 0;
+            margin-right: 0.6em;
+            transform: rotate(90deg);
+          }
+
+          &.dice {
+            min-width: 70px;
+            margin-top: 0.7em;
+            margin-right: 1.4em;
+            transform: rotate(-15deg);
+          }
+        }
+      }
+    }
+  }
+
+  & .neon {
+    width: 100%;
+    border-top: 2px #d6bbef;
+    border-bottom: 2px #d6bbef;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+
+    .list {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      .list {
+        &__item {
+          width: 120px;
+
+          a {
+            img {
+            }
+          }
+        }
+      }
+    }
+
+    .games {
+      margin-top: 10px;
+      margin-bottom: -10px;
+
+      & .list {
+        &__item {
+          width: 120px;
+        }
+      }
+    }
+  }
+
+  & .bottom {
+    & .promo {
+      padding: 20px;
+      display: flex;
+
+      & .text {
+        width: 70%;
+        color: white;
+        font-size: 32px;
+        font-family: "Rowdies", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        .purple {
+          font-size: 42px;
+          color: #fa5cfa;
+          font-weight: 500;
+        }
+      }
+
+      .join {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        &_link {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    & .coins {
+      padding-top: 20px;
+    }
+
+    & .buttons {
+      .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        list-style: none;
+        padding: 0 20px;
+
+        &__item {
+        }
+      }
+    }
+
+    & .footer {
+      margin-top: 50px;
+      .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+
+        &__item {
+          max-width: 150px;
+
+          .chip-1 {
+            max-width: 55px;
+            transform: rotate(60deg);
+          }
+
+          .chip-2 {
+            max-width: 45px;
+            margin-top: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
